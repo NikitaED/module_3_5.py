@@ -1,6 +1,8 @@
 def get_multiplied_digits(number):
-    str_number = str(number)
+    str_number = str(number).rstrip('0')
     first = int(str_number[0])
+    print(str_number)
+    print(first)
     if len(str_number) > 1:
         return first * get_multiplied_digits(int(str_number[1:]))
     else:
@@ -9,6 +11,6 @@ def get_multiplied_digits(number):
 
 
 
-result = get_multiplied_digits(5481451)
+result = get_multiplied_digits(420)
 print(result)
 
